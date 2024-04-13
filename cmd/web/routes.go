@@ -13,10 +13,7 @@ func (app *application) routes() http.Handler {
 
 	mux := pat.New()
 
-	mux.Post("/api/create-module-info", dynamicMiddleware.ThenFunc(app.createModuleInfo))
-	mux.Get("/api/get-module-info/:id", dynamicMiddleware.ThenFunc(app.getModuleInfo)) //http://localhost:4001/api/get-module-info/2
-	mux.Put("/api/update-module-info", dynamicMiddleware.ThenFunc(app.updateModuleInfo))
-	mux.Del("/api/delete-module-info/:id", dynamicMiddleware.ThenFunc(app.deleteModuleInfo))
+	mux.Post("/api/correct-text", dynamicMiddleware.ThenFunc(CorrectHandler))
 
 	return standardMiddleware.Then(mux)
 }
