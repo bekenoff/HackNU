@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-const apiKey = "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"
+const apiKey = "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"
 const url = "https://api.openai.com/v1/chat/completions"
 
 type CompletionResponse struct {
@@ -41,7 +41,7 @@ func CorrectHandler(w http.ResponseWriter, r *http.Request) {
 		"messages": []map[string]interface{}{
 			{"role": "user", "content": "Correct the text so that it is grammatically correct in the Kazakh language and indicate errors that were made in the grammar and give answer only in Kazakh language: " + text},
 		},
-		"model": "gpt-3.5-turbo",
+		"model": "gpt-4-turbo",
 	}
 
 	jsonData, err := json.Marshal(data)

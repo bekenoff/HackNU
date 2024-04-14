@@ -19,6 +19,9 @@ func (app *application) routes() http.Handler {
 	// Synonym
 	mux.Post("/api/synonym", dynamicMiddleware.ThenFunc(synonymHandler))
 
+	// Texts
+	mux.Post("/api/texts", dynamicMiddleware.ThenFunc(synonymHandler)) //http://localhost:4000/api/texts?text="Басты ойы жазушы Шоқан туралы"
+
 	// Clients
 	mux.Post("/api/create/client", dynamicMiddleware.ThenFunc(app.signupClient))
 	mux.Post("/api/auth/client", dynamicMiddleware.ThenFunc(app.loginClient))

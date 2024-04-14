@@ -16,7 +16,7 @@ func synonymHandler(w http.ResponseWriter, r *http.Request) {
 		"messages": []map[string]interface{}{
 			{"role": "user", "content": "Найди синонимы на казахском языке и напиши их: " + text},
 		},
-		"model": "gpt-3.5-turbo",
+		"model": "gpt-4-turbo",
 	}
 
 	jsonData, err := json.Marshal(data)
