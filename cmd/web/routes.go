@@ -14,10 +14,10 @@ func (app *application) routes() http.Handler {
 	mux := pat.New()
 
 	// Grammar
-	mux.Post("/api/correct-text", dynamicMiddleware.ThenFunc(CorrectHandler)) //http://localhost:4000/api/correct-text?text="менин атым Алим"
+	mux.Get("/api/correct-text", dynamicMiddleware.ThenFunc(CorrectHandler)) //http://localhost:4000/api/correct-text?text="менин атым Алим"
 
 	// Synonym
-	mux.Post("/api/synonym", dynamicMiddleware.ThenFunc(synonymHandler))
+	mux.Get("/api/synonym", dynamicMiddleware.ThenFunc(synonymHandler))
 
 	// Texts
 	mux.Post("/api/texts", dynamicMiddleware.ThenFunc(synonymHandler)) //http://localhost:4000/api/texts?text="Басты ойы жазушы Шоқан туралы"

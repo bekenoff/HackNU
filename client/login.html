@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI NUR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#">
+    <img src="assets/img/logo.png" alt="Global">
+    <p>AI NUR</p>
+  </a>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport">
+      <div class="l-wrapper">
+        <main class="main-container">
+            <form action="http://localhost:4000/api/auth/client" method="post" style="display: flex; border: white solid 2px; align-items: center; justify-content: center; text-align: center; flex-direction: column; max-width: 40%; margin: auto;">
+                <h1>Логин</h1>
+                <div style="align-items: center; justify-content: center; text-align: center; flex-direction: column; display: flex;">
+                    <label for="email" style="margin-bottom: 10px;">E-mail:</label>
+                    <input type="text" id="email" style="margin-bottom: 10px; color: black;" name="email" required>
+                    <label for="password" style="margin-bottom: 10px;">Пароль:</label>
+                    <input type="password" style="margin-bottom: 10px; color: black;" id="password" name="password" required>
+                    <button type="submit" class="default-button" style="height: 50px; font-size: 20px; margin-bottom: 10px;">Login</button>
+                </div>
+            </form>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/func.js"></script>
+</body>
+</html>

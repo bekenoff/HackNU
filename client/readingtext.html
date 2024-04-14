@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI NUR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#">
+    <img src="assets/img/logo.png" alt="Global">
+    <p>AI NUR</p>
+  </a>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="./index.html">
+            <img src="assets/img/logo.png" alt="Global">
+            <p>AI NUR</p>
+          </a>
+          <button class="header--cta cta">Перейти к AI NUR</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <main class="main-container">
+            <div style="border: white solid 2px; margin-left: 5%; margin-right: 5%;">
+                <h1>Айдын сыры</h1>
+                <button class="default-button" style="height: auto; font-size: 20px; padding: 10px;" onclick="translateText()">
+                    Перевести
+                </button>
+                <div class="grid-2-cols" style="margin: 10px 0 0 0; gap: 0;">
+                    <div style="border: white solid 2px; width: 100%;">
+                        <p>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Бір</span>
+                                <div class="number-display">Один</div>
+                            </div> 
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">күні</span>
+                                <div class="number-display">днём</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Әли</span>
+                                <div class="number-display">Али</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">жұлдызды</span>
+                                <div class="number-display">звездное</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">аспанға</span>
+                                <div class="number-display">на небо</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">қарап</span>
+                                <div class="number-display">смотрел</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">отырған</span>.
+                                <div class="number-display">сидел</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Оған</span>
+                                <div class="number-display">Ему</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">айдың</span>
+                                <div class="number-display">луны</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">ар жағында</span>
+                                <div class="number-display">за ней</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">не</span>
+                                <div class="number-display">что</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">болатыны</span>
+                                <div class="number-display">будет</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">қызық</span>
+                                <div class="number-display">интересно</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">болды</span>.
+                                <div class="number-display">было</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Ол</span>
+                                <div class="number-display">Он</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">өз</span>
+                                <div class="number-display">в своей</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">қиялында</span> 
+                                <div class="number-display">мечте</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">айға</span>
+                                <div class="number-display">на луну</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">ұшып</span>, 
+                                <div class="number-display">полететь</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">сол</span> 
+                                <div class="number-display">той</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">жақтың</span> 
+                                <div class="number-display">стороны</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">сырын</span>
+                                <div class="number-display">секрет</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">ашты</span>. 
+                                <div class="number-display">открыл</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Айда</span>
+                                <div class="number-display">У луны</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Әли</span>
+                                <div class="number-display">Али</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">әртүрлі</span>
+                                <div class="number-display">разные</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">ғажайып</span>
+                                <div class="number-display">чудесные</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">заттар</span> 
+                                <div class="number-display">вещи</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">мен</span> 
+                                <div class="number-display">и</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">жұлдыздар</span> 
+                                <div class="number-display">звёзды</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">арасында</span>
+                                <div class="number-display">между</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">серуендеді</span>. 
+                                <div class="number-display">гулял</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Ол</span>
+                                <div class="number-display">Он</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">жұлдыздармен</span> 
+                                <div class="number-display">со звездами</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">дос</span> 
+                                <div class="number-display">друг</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">болып</span>, 
+                                <div class="number-display">стал</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">ғарыштың</span> 
+                                <div class="number-display">космоса</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">үлкендігіне</span>
+                                <div class="number-display">величина</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">таңғалды</span>. 
+                                <div class="number-display">удивился</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">Ақырында</span>, 
+                                <div class="number-display">В итоге</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">оянғанда</span>, 
+                                <div class="number-display">когда проснулся</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">бәрі</span> 
+                                <div class="number-display">все</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">тек</span> 
+                                <div class="number-display">только</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">қиял</span> 
+                                <div class="number-display">воображение</div>
+                            </div>
+                            <div class="word-container">
+                                <span class="word-orig" onclick="toggleTranslateDisplay(this)">екенін</span> 
+                                <div class="number-display">что это</div>
+                            </div>
+                            <div class="word-container" onclick="toggleTranslateDisplay(this)">
+                                <span class="word-orig">түсінді</span>.
+                                <div class="number-display">понял</div>
+                            </div>
+                        </p>
+                    </div>
+                    <div style="border: white solid 2px; width: 100%;">
+                        <p id="translatedText" style="display: none;">
+                            Однажды Али сидел и смотрел на звёздное небо. Ему стало интересно, что находится за луной. В своём воображении он полетел на луну и раскрыл тайны той стороны. На луне Али гулял среди различных чудесных предметов и звёзд. Он подружился со звёздами и удивлялся величию космоса. В конце концов, проснувшись, он понял, что всё это было только в его воображении.
+                        </p>
+                        
+                        <p id="translationNote">
+                            Аудармасы...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <a href="./index.html"><li class="is-active">AI NUR</li></a>
+    <a href="./index.html"><li>Чат</li></a>
+    <a href="./index.html"><li>Обучение</li></a>
+    <a href="./index.html"><li>Проверка знаний</li></a>
+    <a href="./index.html"><li>Книги</li></a>
+    <a href="./index.html"><li>Конференц-звонки</li></a>
+    <a href="./index.html"><li>Видеоролики</li></a>
+    <a href="./index.html"><li>Прогресс</li></a>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/func.js"></script>
+</body>
+</html>

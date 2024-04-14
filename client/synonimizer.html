@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI NUR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#">
+    <img src="assets/img/logo.png" alt="Global">
+    <p>AI NUR</p>
+  </a>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="./index.html">
+            <img src="assets/img/logo.png" alt="Global">
+            <p>AI NUR</p>
+          </a>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <main class="main-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <h1>Синонимайзер</h1>
+            <div class="">
+                <form style="display: flex; align-items: center;">
+                    <input type="text" name="word-for-synonym" id="inputTextSyn" style="color: black;">
+                    <button type="button" onclick="sendSyn()" class="default-button" style="height: 50px;">Отправить</button>
+                </form>
+            </div>
+            <h1>Синонимы:</h1>
+            <p style="font-size: 18px;" id="synText">Синонимы</p>
+        </main>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <a href="./index.html"><li class="is-active">AI NUR</li></a>
+    <a href="./index.html"><li>Чат</li></a>
+    <a href="./index.html"><li>Обучение</li></a>
+    <a href="./index.html"><li>Проверка знаний</li></a>
+    <a href="./index.html"><li>Книги</li></a>
+    <a href="./index.html"><li>Конференц-звонки</li></a>
+    <a href="./index.html"><li>Видеоролики</li></a>
+    <a href="./index.html"><li>Прогресс</li></a>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/func.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI NUR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#">
+    <img src="assets/img/logo.png" alt="Global">
+    <p>AI NUR</p>
+  </a>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="./index.html">
+            <img src="assets/img/logo.png" alt="Global">
+            <p>AI NUR</p>
+          </a>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <main class="main-container">
+            <h1>ТЕСТЫ НА ГРАММАТИКУ</h1>
+            <div class="">
+                <div class="test-block grid-2-cols" style="text-align: left; align-items: center; justify-content: center;">
+                  <div>
+                    <h2>Вопросы на грамматику</h2>
+                    <div style="display: flex;">
+                        <h3 style="margin-right: 15px;">Количество вопросов: 5</h3>
+                        <h3>Количество прохождений: 10</h3>
+                    </div>
+                  </div>
+                  <button style="margin-left: auto; border-radius: 25px; height: 50px; width: 50px; background-color: rgb(85, 85, 85); border: rgb(147, 146, 146) solid 1px; align-items: center; justify-content: center; display: flex;" onclick="hideFormGrammar()">
+                    <img src="./assets/img/chevronright.png" height="40px" width="40px" alt="">
+                  </button>
+                </div>
+                
+                <form action="/count_correct_answers_grammar" method="POST" style="display: none;">
+                  <div class="question-answer">
+                    <label for="">Қай сөйлемде септік жалғаулығы дұрыс қолданылған? <br>
+                        А. Мен сенімен киноға бардым. <br>
+                        В. Мен сенмен киноға бардым. <br>
+                        С. Мен сенге киноға бардым. <br> </label>
+                    <input type="text" class="answer" name="1q">
+                    <!-- Иә -->
+                  </div>
+                  <div class="question-answer">
+                    <label for="">"Оқушылар мектепке келеді" сөйлемінде "мектепке" қандай септікте тұр? <br>
+                        А. Атау септік <br>
+                        В. Барыс септік <br>
+                        С. Табыс септік <br></label>
+                    <input type="text" class="answer" name="2q">
+                    <!-- Иә -->
+                  </div>
+                  <div class="question-answer">
+                    <label for="">Қай сөйлемде сын есім дұрыс қолданылған? <br>
+                        А. Ол үлкен ағашты көрді. <br>
+                        В. Ол ағаш үлкенді көрді. <br>
+                        С. Ол үлкенді ағаш көрді. <br></label>
+                    <input type="text" class="answer" name="3q">
+                    <!-- Жоқ -->
+                  </div>
+                  <div class="question-answer">
+                    <label for="">"Балалар ойнап жатыр" сөйлемінде "ойнап" қандай грамматикалық формада? <br>
+                        А. Негізгі түр <br>
+                        В. Қатысушы түр <br>
+                        С. Ырықты күй <br></label>
+                    <input type="text" class="answer" name="4q">
+                    <!-- Бүркіт -->
+                  </div>
+                  <div class="question-answer">
+                    <label for="">Қай сөйлемдегі етістік шақ тұрғысынан дұрыс қолданылған? <br>
+                        А. Кеше ол кітап оқиды. <br>
+                        В. Ертең ол кітап оқиды. <br>
+                        С. Қазір ол кітап оқиды. <br></label>
+                    <input type="text" class="answer" name="5q">
+                    <!-- Саңырауқұлақ -->
+                  </div>
+                  <div class="question-answer" style="display: flex; text-align: center; justify-content: center; align-items: center;">
+                    <button type="submit" class="default-button" style="height: 50px;">Отправить</button>
+                  </div>
+                </form>
+            </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <a href="./index.html"><li class="is-active">AI NUR</li></a>
+    <a href="./index.html"><li>Чат</li></a>
+    <a href="./index.html"><li>Обучение</li></a>
+    <a href="./index.html"><li>Проверка знаний</li></a>
+    <a href="./index.html"><li>Книги</li></a>
+    <a href="./index.html"><li>Конференц-звонки</li></a>
+    <a href="./index.html"><li>Видеоролики</li></a>
+    <a href="./index.html"><li>Прогресс</li></a>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/func.js"></script>
+</body>
+</html>

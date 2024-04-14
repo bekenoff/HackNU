@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-const apiKey = "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"
+const apiKey = "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"
 const url = "https://api.openai.com/v1/chat/completions"
 
 type CompletionResponse struct {

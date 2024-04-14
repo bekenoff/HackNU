@@ -22,11 +22,19 @@ type Client struct {
 }
 
 type Progress struct {
-	Id             int     `json:"id"`
-	Level          int     `json:"level"`
-	Points         float32 `json:"points"`
-	Tests          int     `json:"tests"`
-	CompletedTests int     `json:"completed_tests"`
-	AvgPoints      float32 `json:"avg_points"`
-	ClientId       int     `json:"client_id"`
+	Id       int    `json:"id"`
+	Level    string `json:"level"`
+	Points   int    `json:"points"`
+	Tests    int    `json:"tests"`
+	Films    int    `json:"films"`
+	Meetings int    `json:"meetings"`
+	ClientId int    `json:"client_id"`
+}
+
+type Video struct {
+	Id       int    `json:"id"`
+	Filename string `json:"filename"`
+	Filepath string `json:"filepath"`
+	Likes    int    `json:"likes"`
+	ClientId string `json:"client_id"`
 }

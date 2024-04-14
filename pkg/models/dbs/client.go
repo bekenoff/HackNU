@@ -1,12 +1,13 @@
-package main
+package dbs
 
 import (
 	"HackNU/pkg/models"
 	"database/sql"
+	"encoding/json"
 	"errors"
-
 	"github.com/go-sql-driver/mysql"
 	"golang.org/x/crypto/bcrypt"
+	"log"
 )
 
 type ClientModel struct {
@@ -58,4 +59,64 @@ func (m *ClientModel) Authenticate(email, password string) (int, error) {
 		}
 	}
 	return id, nil
+}
+
+func (m *ClientModel) GetUserById(id int) ([]byte, error) {
+	stmt := `SELECT * FROM ainur_hacknu.client WHERE id = ?`
+	c := &models.Client{}
+
+	userRow := m.DB.QueryRow(stmt, id)
+
+	err := userRow.Scan(&c.IdClient, &c.ClientMail, &c.ClientPass)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return nil, models.ErrNoRecord
+		} else {
+			return nil, err
+		}
+	}
+
+	convertedUser, err := json.Marshal(c)
+	if err != nil {
+		return nil, err
+	}
+
+	return convertedUser, nil
+}
+
+func (m *ClientModel) GetUserByEmailAndPassword(email, password string) (int, error) {
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), 12)
+	if err != nil {
+		return 0, nil
+	}
+	stmt := `SELECT id FROM ainur_hacknu.client WHERE client_mail = ? AND client_pass = ?`
+	var userId int
+
+	err = m.DB.QueryRow(stmt, email, hashedPassword).Scan(&userId)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return 0, models.ErrNoRecord
+		} else {
+			return 0, err
+		}
+	}
+
+	return userId, nil
+}
+
+func (m *ClientModel) GetLastUserId() (int, error) {
+	stmt := `SELECT MAX(id) FROM ainur_hacknu.client`
+	var lastId int
+
+	err := m.DB.QueryRow(stmt).Scan(&lastId)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return 0, nil
+		} else {
+			log.Printf("Error: %v", err)
+			return 0, err
+		}
+	}
+
+	return lastId, nil
 }
