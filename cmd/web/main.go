@@ -1,8 +1,10 @@
 package main
 
 import (
+	"HackNU/pkg/models/dbs"
 	"database/sql"
 	"flag"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/golangcollege/sessions"
 	"github.com/rs/cors"
 	"html/template"
@@ -17,6 +19,9 @@ type application struct {
 	infoLog       *log.Logger
 	session       *sessions.Session
 	templateCache map[string]*template.Template
+	client        *dbs.ClientModel
+	progress      *dbs.ProgressModel
+	video         *dbs.VideoModel
 }
 
 func main() {
@@ -49,6 +54,9 @@ func main() {
 		errorLog: errorLog,
 		infoLog:  infoLog,
 		session:  session,
+		client:   &dbs.ClientModel{DB: db},
+		progress: &dbs.ProgressModel{DB: db},
+		video:    &dbs.VideoModel{DB: db},
 	}
 
 	srv := &http.Server{
